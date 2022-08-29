@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+       let student = [
+        {
+            fullname: 'นายตั้งใจ เรียนมาก',
+            age: 18,
+            year: 1,
+            gpa: 3.40,
+            help: true
+        },
+        {
+            fullname: 'นายส่งงาน ตลอดมา',
+            age: 19,
+            year: 2,
+            gpa: 3.00,
+            help: false
+        },
+        {
+            fullname: 'นางสาวใส่ใจ ดีงาม',
+            age: 20,
+            year: 3,
+            gpa: 2.90,
+            help: true
+        },
+        {
+            fullname: 'นางสาววันวาน พร้อมเพียง',
+            age: 21,
+            year: 4,
+            gpa: 2.60,
+            help: false
+        },
+        {
+            fullname: 'นายนาวี อินใจ',
+            age: 19,
+            year: 1,
+            gpa: 3.00,
+            help: false
+        },
+        {
+            fullname: 'นางสาวกานดา เงินทอง',
+            age: 20,
+            year: 2,
+            gpa: 3.50,
+            help: true
+        },
+        {
+            fullname: 'นายชนะ สีเขียว',
+            age: 21,
+            year: 3,
+            gpa: 2.50,
+            help: false
+        },
+        {
+            fullname: 'นางสางพรพรรณ เจิดจ้า',
+            age: 22,
+            year: 4,
+            gpa: 2.80,
+            help: true
+        }
+    ]
+    for (let s in student){
+        if(student[s].gpa >= 3.20 && student[s].year >= 1){
+            if(student[s].help == true){
+                bursary = ' ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย'
+            }
+            else{
+                bursary = ' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์'
+            }
+        }
+        else if(student[s].year >= 2 && student[s].help == true){
+            if(student[s].help == true && student[s].gpa >= 2.75){
+                bursary = ' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย'
+            }
+            else{
+                bursary = ' ไม่ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์ และยังไม่ได้ช่วยงานภาควิชา'
+            }
+        }
+        else if(student[s].help == true && student[s].year == 1){
+            bursary = ' ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์ เเต่ช่วยงานภาควิชา'
+        }
+        else{
+            bursary = ' ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์ และยังไม่ได้ช่วยงานภาควิชา'
+        }
+        console.log(student[s].fullname+ ' เกิดเมื่อปี'+(2564-student[s].age)+''+bursary)
+    }
+    </script>
+</head>
+</html>
+
+
